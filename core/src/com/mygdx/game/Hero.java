@@ -17,6 +17,8 @@ public class Hero {
     private int fireCounter;
     private int score;
 
+    public Vector2 getPosition() { return position; }
+
     public int getScore() {
         return score;
     }
@@ -79,5 +81,10 @@ public class Hero {
                 break;
             }
         }
+    }
+
+    public void startGame() {
+       position =  new Vector2(100, 100);
+       score = 0;
     }
 }

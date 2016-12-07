@@ -75,4 +75,11 @@ public class Asteroid {
         if (position.x < -60) recreate();     // если звезда залетает за левую сторону - она появляется справа
 
     }
+
+    public void startGame() {
+        if (texture == null) texture = new Texture("asteroid-icon.png");
+        //   Gdx.graphics.getWidth();  // 1280
+        //   Gdx.graphics.getHeight(); // 720
+        position = new Vector2(1280 + 1280 + 1280 * (float)Math.random(), 720 * (float)Math.random()); // случайное расположение звезд от 0 до 1280 и от 0 до 720
+    }
 }
